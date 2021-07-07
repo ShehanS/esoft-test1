@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sample</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="gotoPage()">Goto</ion-button>
+  <ul>
+    <li *ngFor='let u of names'>{{u}}</li>
+  </ul>
+
+  <ion-card *ngFor='let name of names'>
+    <ion-card-header>
+      <ion-card-title>
+          {{name}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ESOFT
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

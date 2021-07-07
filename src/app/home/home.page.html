@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Sample App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <div class="hello">Hello</div>
+
+  <ion-button color="primary" (click)="test()">OK</ion-button>
+  <p>My name is {{name}}</p>
+  <p>Sum {{num1+num}}</p>
+  <ion-button (click)="gotoPage()">Goto</ion-button>
+
+  <form [formGroup]="loginForm">
+
+  <ion-item>
+    <ion-input type="text" placeholder="Username" formControlName="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+  </ion-item>
+
+  <ion-button color="dark" (click)="submit()">Submit</ion-button>
+  {{logingError}}
+</form>
+
+
 </ion-content>
